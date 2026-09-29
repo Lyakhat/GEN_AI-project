@@ -1,0 +1,58 @@
+# Subfolder .gitignore files (excluded from repository as requested)
+Frontend/.gitignore
+backend/.gitignore
+
+# Dependencies
+node_modules/
+Frontend/node_modules/
+backend/node_modules/
+
+# Environment variables & secrets
+.env
+.env.*
+*.env
+Frontend/.env
+Frontend/.env.*
+backend/.env
+backend/.env.*
+!.env.example
+!Frontend/.env.example
+!backend/.env.example
+*.pem
+*.key
+*.cert
+credentials.json
+
+# Build outputs
+dist/
+dist-ssr/
+Frontend/dist/
+Frontend/dist-ssr/
+build/
+
+# Uploads & temporary files
+uploads/
+temp/
+tmp/
+backend/uploads/
+backend/temp/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+logs/
+*.log
+
+# Editor directories & OS files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Thumbs.db
