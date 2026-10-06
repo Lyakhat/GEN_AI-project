@@ -39,6 +39,12 @@ app.use(cors({
     allowedHeaders: ["Content-Type", "Authorization", "Cookie", "X-Requested-With"]
 }))
 
+// Rate limiting middleware
+const { globalLimiter } = require("./middlewares/rateLimiter.middleware")
+
+// Apply global rate limiter to all API routes
+app.use("/api", globalLimiter)
+
 // Health check endpoint
 app.get("/api/health", (req, res) => {
     res.status(200).json({ status: "ok", message: "Backend is running smoothly" })
